@@ -20,7 +20,6 @@
 
 의존도는 위에 그림과 아래로 진행되고 Entities는 다른 레이어 층을 모르고  Presenters는 내부에 있는  Use Cases, Entities 알고있다. 
 
-<<<<<<< HEAD
 =======
 
  - UI
@@ -41,4 +40,3 @@ Entities 가 정의되야함
  
 
 -------
->>>>>>> 3ee3e3d6b214d4b1f4f648808e426e70c31022b6
