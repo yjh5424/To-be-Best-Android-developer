@@ -17,11 +17,21 @@
 
 - AAC 구조  
      ![AAC rnwh ](./image/aac구조.jpeg)  
-    - **View*  
-    View는 activity, fragment를 말한다. view 에서는 기능을 수행하는 것이 아니라 Ui만 컨트롤 한다고 생각하면 된다 
-    - View Model 
-    - Repository
-    - Room 
+    - **View**  
+    View는 activity, fragment를 말한다. view 에서는 기능을 수행하는 것이 아니라 Ui만 컨트롤 한다고 생각하면 된다. 여기서 가장 중요한 내용은 ViewModel의 LiveData를 관찰하면서 Ui 상태를 알려주는 것 이다. 
+    쉽게 말하면 ViewModel이 주 기능을 수행하면서 데이터에 변화를 주면 View는 그 데이터를 관찰하면서 사용자가 어떤 기능(로그인, 사용자 리스트 , 마이페이지 등등)을 수행했는지 보고 Ui를 업데이트 해준다. 
+    - **View Model**  
+    View가 유지되는 동안 LifeCycle을 상태를 관찰한다.   
+    LiveData는 Repository에 의헤 제공받게 되고 ViewModel은 View를 참조를 않하고 즉 View의 업데이트를 View Model에서 진행 하지않고 View가 LiveData를 관찰하면서 진행된다.
+    - **Repository**  
+    Repository는 구글에서 제공하는 컴포넌트는 아니다. 데이터베이스, 네트워크 작업에 대한 데이터를 가져오는 역할을 한다. 가져올 때는 LiveData로 변환해서 ViewModel에게 전달해준다. 
+    - **Room**  
+    Room은 Sqlite 매핑 라이브러리이다. 다른 안드로이드에서 사용하는 데이터베이스와 큰 틀은 비슷하지만 
+    LiveData가 있는 쿼리를 만들고 반환이 가능하다.
+
+- 프로젝트에 AAC에 적용하는 방법  
+[Android Developers](https://developer.android.com/topic/libraries/architecture/adding-components)
+
 
 
 
