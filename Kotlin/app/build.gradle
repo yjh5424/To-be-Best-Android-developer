@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.yunjunghyeon.demotestapp"
+        applicationId "com.example.yunjunghyeon.kotlinexample"
         minSdkVersion 22
         targetSdkVersion 28
         versionCode 1
@@ -30,16 +30,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
-    def room_version = "1.1.1"
-
-    implementation "android.arch.persistence.room:runtime:$room_version"
-    annotationProcessor "android.arch.persistence.room:compiler:$room_version" // use kapt for Kotlin
-
-    testImplementation"junit:junit:$rootProject.ext.junitVersion"
-    testImplementation "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
-    testImplementation "org.hamcrest:hamcrest-all:$rootProject.ext.hamcrestVersion"
-    testImplementation "org.powermock:powermock-module-junit4:$rootProject.ext.powerMockito"
-    testImplementation "org.powermock:powermock-api-mockito:$rootProject.ext.powerMockito"
-
 }
